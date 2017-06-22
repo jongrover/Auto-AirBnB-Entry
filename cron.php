@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 require 'inc.php';
 chdir(dirname(__FILE__));
 
-$config = yaml_parse(file_get_contents('config.yml'));
+$config = json_decode(file_get_contents('config.json'));
 
 echo date('Y-m-d H:i:s')."\n";
 
@@ -56,8 +56,6 @@ foreach($config['locations'] as $location) {
       }
     }
   }
-  
+
   echo "Done\n\n";
 }
-
-

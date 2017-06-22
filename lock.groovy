@@ -97,7 +97,7 @@ def codeChangedEvent(evt) {
 
 def sendPostRequest(data) {
   httpPostJson([
-    uri: "http://door.launchpad4.com/notify.php",
+    uri: "https://door.jonathangrover.com/notify.php",
     body: data
   ])
 }
