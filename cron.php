@@ -3,7 +3,7 @@ require 'vendor/autoload.php';
 require 'inc.php';
 chdir(dirname(__FILE__));
 
-$config = json_decode(file_get_contents('config.json'));
+$config = json_decode(file_get_contents('config.json'), true);
 
 echo date('Y-m-d H:i:s')."\n";
 

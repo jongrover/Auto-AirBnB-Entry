@@ -1,15 +1,17 @@
 <?php
 
-// function console_log( $data ) {
-//   echo '<script>';
-//   echo 'console.log('. json_encode( $data ) .')';
-//   echo '</script>';
-// }
+function console_log( $data ) {
+  echo '<script>';
+  echo 'var data = '.json_encode( $data ).';';
+  echo 'console.log(data)';
+  echo '</script>';
+}
 
 require 'vendor/autoload.php';
 require 'inc.php';
 
-$config = json_decode(file_get_contents('config.json'));
+$config = json_decode(file_get_contents('config.json'), true);
+console_log($config);
 ?>
 <html>
 <head>
