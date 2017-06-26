@@ -3,9 +3,8 @@ require 'vendor/autoload.php';
 require 'inc.php';
 
 $config = json_decode(file_get_contents('config.json'), true);
-$master_pass = 'HuggLock';
 
-if($_POST['password'] == $master_pass) {
+if($_POST['password'] == $config['master_pass']) {
   foreach($config['locations'] as $l) {
     if($l['name'] == $_POST['location'])
       $location = $l;
